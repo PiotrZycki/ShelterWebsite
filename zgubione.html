@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="arkusz1.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!--<script src="https://code.jquery.com/color/jquery.color-2.2.0.js" integrity="sha256-gvMJWDHjgDrVSiN6eBI9h7dRfQmsTTsGU/eTT8vpzNg=" crossorigin="anonymous"></script>-->
+
+    <script src="jquery.easing.1.3.js"></script>
+    <script src="jquery.color-2.1.2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+
+
+            $('#men').click(
+                function () {
+                    var clicks = $(this).data('clicks');
+                    if (!clicks) {
+
+                        $('#menu').stop().animate(
+                            {
+                                left: '0',
+                                //backgroundColor: 'rgb(153, 204, 255',
+
+                            },
+                            500,
+                            'easeInSine'
+                        );
+
+
+                        //backgroundColor: 'rgb(153, 204, 255)',
+
+                    }
+                    else {
+                        $('#menu').stop().animate(
+                            {
+                                left: '-80%',
+                                //backgroundColor: 'rgb(110, 138, 195)'
+                            },
+                            1000,
+                            'easeInOutQuint'
+                        );
+                    }
+                    $(this).data("clicks", !clicks);
+                }
+
+            );
+        });
+
+
+
+        $(document).ready(function () {
+            $('#menu ul').hide();
+
+            $('.con').hover(
+                function () {
+                    // Schowaj wszystkie otwarte kolumny przed otwarciem nowej
+                    $('.con ul').not($('ul', this)).slideUp('normal', 'easeInSine');
+
+                    // Otwórz bieżącą kolumnę
+                    $('> ul', this).slideDown('normal', 'easeInSine');
+                },
+                function () {
+                    // Schowaj wszystkie kolumny po opuszczeniu obszaru .con
+                    $('.con ul').slideUp('normal', 'easeInSine');
+                }
+            );
+        });
+
+    </script>
+</head>
+<body>
+    <div id="menuBar">
+        <a href="index.html"><img src="logo.jpg" /></a>
+        <nav id="naw">
+
+            <a id="men" onclick=""></a>
+
+            <ul id="menu">
+
+                <li><a href="aktualnosci.html">Aktualności</a></li>
+
+                <li>
+                    <div class="con">
+                        <a href="zgloszenie.html">Zgłoszenia</a>
+                        <ul>
+                            <li><a href="zgloszenie.html">Zgłoś zgubę/znajdę</a></li>
+                            <li><a href="zgubione.html">Zgubione</a></li>
+                            <li><a href="znalezione.html">Znalezione</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="con">
+                        <a href="poradnik.html">Adopcja</a>
+                        <ul>
+                            <li><a href="poradnik.html">Poradnik</a></li>
+                            <li><a href="koty.html">Koty</a></li>
+                            <li><a href="psy.html">Psy</a></li>
+                            <li><a href="inne.html">Inne zwierzęta</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="con">
+                        <a href="wolontariat.html">Pomoc</a>
+                        <ul>
+                            <li><a href="wolontariat.html">Wolontariat</a></li>
+                            <li><a href="inne_formy.html">Inne formy pomocy</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="kontakt.html">Kontakt</a></li>
+
+                <li><div id="empty"></div></li>
+            </ul>
+
+        </nav>
+    </div>
+    <div id="content">
+        <img src="tlo.jpg" id="obrazek" />
+        <div id="wazne">
+            <a href="zgloszenie.html">Zgłoś znajdę/zgubę</a>
+            <a href="zgubione.html" id="obecna">Zgubione</a>
+            <a href="znalezione.html">Znalezione</a>
+        </div>
+        <hr id="linia1" />
+
+
+        <form action="">
+            <div class="pomoc">
+                <button type="submit" class="podkresl">Filtruj</button>
+            </div>
+
+            <div class="kategoria">
+                <div class="gatunek">
+                    <p>...po gatunku</p>
+                    <div>
+                        <input type="button" value="pies" class="podkresl" />
+                        <input type="button" value="kot" class="podkresl" />
+                        <input type="button" value="inne" class="podkresl" />
+                    </div>
+                </div>
+                <div class="lokalizacja">
+                    <p>...po lokalizacji</p>
+                    <input type="text" placeholder="rejon" name="rejon" required>
+                </div>
+                <div class="data">
+                    <p>...po dacie</p>
+                    <div>
+                        <input type="date" placeholder="początkowa" name="data_pocz" required>
+                        <p> - </p>
+                        <input type="date" placeholder="końcowa" name="data_kon" required>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="zaginiecia">
+            <div class="zglo">
+                <img src="zwierzak2.jpg" />
+                <p>
+                    <b>Kraków, Cichy Kącik</b><br />
+                    28-12-2023<br />
+                    Reaguje na imię Lulu.
+                </p>
+            </div>
+            <div class="zglo">
+                <img src="zwierzak5.jpg" />
+                <p>
+                    <b>Kraków, Krowodrza</b><br />
+                    17-12-2023<br />
+                    Reaguje na imię Kalo.
+                </p>
+            </div>
+            
+            <div class="zglo">
+                <img src="zwierzak6.jpg" />
+                <p>
+                    <b>Kraków, Krowodrza</b><br />
+                    14-12-2023<br />
+                    Reaguje na imię Arok.
+                </p>
+            </div>
+            <div class="zglo">
+                <img src="zwierzak7.jpg" />
+                <p>
+                    <b>Kraków, Cichy Kącik</b><br />
+                    10-12-2023<br />
+                    Reaguje na imię Popo.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <hr />
+        <p>
+            <b>Kontakt</b><br />
+            ul. Reymonta 21, 30-059 Kraków<br />
+            nr telefonu: 555 111 333
+        </p>
+    </footer>
+</body>
+</html>

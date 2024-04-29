@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="aktualnosci.css">
+    <link rel="stylesheet" type="text/css" href="arkusz1.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!--<script src="https://code.jquery.com/color/jquery.color-2.2.0.js" integrity="sha256-gvMJWDHjgDrVSiN6eBI9h7dRfQmsTTsGU/eTT8vpzNg=" crossorigin="anonymous"></script>-->
+
+    <script src="jquery.easing.1.3.js"></script>
+    <script src="jquery.color-2.1.2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+
+
+            $('#men').click(
+                function () {
+                    var clicks = $(this).data('clicks');
+                    if (!clicks) {
+
+                        $('#menu').stop().animate(
+                            {
+                                left: '0',
+                                //backgroundColor: 'rgb(153, 204, 255',
+
+                            },
+                            500,
+                            'easeInSine'
+                        );
+
+
+                        //backgroundColor: 'rgb(153, 204, 255)',
+
+                    }
+                    else {
+                        $('#menu').stop().animate(
+                            {
+                                left: '-80%',
+                                //backgroundColor: 'rgb(110, 138, 195)'
+                            },
+                            1000,
+                            'easeInOutQuint'
+                        );
+                    }
+                    $(this).data("clicks", !clicks);
+                }
+
+            );
+        });
+
+
+
+        $(document).ready(function () {
+            $('#menu ul').hide();
+
+            $('.con').hover(
+                function () {
+                    // Schowaj wszystkie otwarte kolumny przed otwarciem nowej
+                    $('.con ul').not($('ul', this)).slideUp('normal', 'easeInSine');
+
+                    // Otwórz bieżącą kolumnę
+                    $('> ul', this).slideDown('normal', 'easeInSine');
+                },
+                function () {
+                    // Schowaj wszystkie kolumny po opuszczeniu obszaru .con
+                    $('.con ul').slideUp('normal', 'easeInSine');
+                }
+            );
+        });
+
+    </script>
+</head>
+<body>
+    <div id="menuBar">
+        <a href="index.html"><img src="logo.jpg" /></a>
+        <nav id="naw">
+
+            <a id="men" onclick=""></a>
+
+            <ul id="menu">
+
+                <li><a href="aktualnosci.html">Aktualności</a></li>
+
+                <li>
+                    <div class="con">
+                        <a href="zgloszenie.html">Zgłoszenia</a>
+                        <ul>
+                            <li><a href="zgloszenie.html">Zgłoś zgubę/znajdę</a></li>
+                            <li><a href="zgubione.html">Zgubione</a></li>
+                            <li><a href="znalezione.html">Znalezione</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="con">
+                        <a href="poradnik.html">Adopcja</a>
+                        <ul>
+                            <li><a href="poradnik.html">Poradnik</a></li>
+                            <li><a href="koty.html">Koty</a></li>
+                            <li><a href="psy.html">Psy</a></li>
+                            <li><a href="inne.html">Inne zwierzęta</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="con">
+                        <a href="wolontariat.html">Pomoc</a>
+                        <ul>
+                            <li><a href="wolontariat.html">Wolontariat</a></li>
+                            <li><a href="inne_formy.html">Inne formy pomocy</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="kontakt.html">Kontakt</a></li>
+
+                <li><div id="empty"></div></li>
+            </ul>
+
+        </nav>
+    </div>
+    <div id="content">
+        <img src="tlo.jpg" id="obrazek" />
+    </div>
+    
+    <section class="aktualnosci">
+        <h1>Aktualności</h1>
+        <div class="szukaj">
+            <input type="text" placeholder="Wyszukaj" class="szukaj_box">
+        </div>
+        <section class="artykul1">
+            <article>
+                <img src="zwierzak1.gif" alt="Zdjęcie artykułu 1">
+                <h2>
+                    Nowe możliwości w naszym schronisku!
+                </h2>
+                <p>
+                    Schronisko Wiślane ma zaszczyt zaprosić Cię na nasz coroczny festyn charytatywny, który odbędzie się w najbliższą sobotę, 15 lipca, na terenie naszego schroniska. To wydarzenie ma na celu wsparcie naszej misji zapewnienia lepszej opieki, schronienia i domów dla naszych podopiecznych, a także zwiększenie świadomości społecznej na temat problemów zwierząt bezdomnych.
+                    <br />
+                    <br />
+                    Co Nas Czeka Podczas Festynu?
+                    <br />
+                    <br />
+                    Adopcje Zwierząt: Podczas festynu będziesz miał okazję poznać naszych uroczych podopiecznych, którzy szukają domów pełnych miłości i troski. Nasze wolontariuszki i pracownicy będą na miejscu, aby opowiedzieć Ci o każdym zwierzaku i pomóc Ci znaleźć swojego nowego najlepszego przyjaciela.
+                    <br />
+                    <br />
+                    Konkursy i Gry: Dla miłośników zabawy przygotowaliśmy wiele atrakcji, w tym konkursy dla dzieci i dorosłych, gry z nagrodami oraz wiele innych emocjonujących aktywności.
+                    <br />
+                    <br />
+                    Pokazy Zwierząt: Zapraszamy na fascynujące pokazy ze zwierzętami, które dostarczą zarówno rozrywki, jak i edukacji. Będzie to doskonała okazja, aby dowiedzieć się więcej o potrzebach i zachowaniach różnych gatunków zwierząt.
+                </p>
+            </article>
+        </section>
+        <section class="artykul2">
+            <article>
+                <img src="zwierzak3.jpg" alt="Zdjęcie artykułu 2">
+                <h2>
+                    Nowe możliwości w naszym schronisku!
+                </h2>
+                <p>
+                    Jesteśmy niezmiernie podekscytowani, aby ogłosić, że Schronisko Wiślane wprowadza nowe skrzydło, które znacząco zwiększy nasze możliwości pomocy zwierzętom w potrzebie! To ważny krok w naszej misji zapewnienia opieki, schronienia i domu dla każdego bezdomnego zwierzęcia.
+
+                    Nowe skrzydło zostało zaprojektowane z myślą o zapewnieniu jeszcze lepszych warunków dla naszych podopiecznych oraz umożliwieniu nam rozszerzenia zakresu naszych działań. Dzięki temu uda nam się przyjąć więcej zwierząt, zapewniając im komfortowe i bezpieczne schronienie w trudnych chwilach.
+                </p>
+            </article>
+        </section>
+    </section>
+    
+    <div id="strony">
+        <div class="kwdrt" id="str_minus"><</div>
+        <div class="kwdrt" id="1">1</div>
+        <div class="kwdrt" id="2">2</div>
+        <div class="kwdrt" id="3">3</div>
+        <div class="kwdrt" id="str_plus">></div>
+    </div>
+
+    <footer>
+        <hr />
+        <p>
+            <b>Kontakt</b><br />
+            ul. Reymonta 21, 30-059 Kraków<br />
+            nr telefonu: 555 111 333
+        </p>
+    </footer>
+</body>
+</html>

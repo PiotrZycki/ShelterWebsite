@@ -1,0 +1,133 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+.szukaj {
+    float: right;
+    margin-top: -40px;
+}
+
+.szukaj_box {
+    padding: 5px;
+}
+
+.aktualnosci h1 {
+    font-size: 30px;
+    text-align: center;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #fff;
+}
+
+/* Header styles */
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+    header nav {
+        text-align: center;
+    }
+
+    header a {
+        margin-left: auto;
+    }
+
+    header nav a {
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+    }
+
+        header nav a:hover {
+            background-color: #ccc;
+        }
+
+        header nav a img {
+            margin-left: 0;
+        }
+
+/* Main section styles */
+main {
+    margin-top: 20px;
+    flex-direction: column; /* Make the "Aktualności" section full-width */
+}
+
+.aktualnosci {
+    background-color: #eee;
+    padding: 10px;
+    //padding-top: 3px;
+}
+
+    .aktualnosci h1 {
+        font-size: 60px;
+        margin-top: 20px;
+        color: #547354;
+    }
+
+    .aktualnosci p {
+        margin-top: 10px;
+    }
+
+.artykul1 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    border-bottom: solid #5A965A;
+}
+
+    .artykul1 img {
+        width: 35%;
+        margin-right: 20px;
+        margin-left: 0;
+        margin-bottom: 20px;
+        float: left;
+        height: fit-content;
+    }
+
+    .artykul1 p {
+        width: 100%;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+.artykul2 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+    .artykul2 img {
+        width: 35%;
+        margin-right: 20px;
+        margin-left: 0;
+        float: left;
+        height: fit-content;
+    }
+
+    .artykul2 p {
+        width: 100%;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+.strony {
+    background-color: #fcfcfc;
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #fcfcfc;
+    padding: 20px;
+    text-align: center;
+}
